@@ -1,0 +1,24 @@
+# --- 1. Ядро для AI-агентов и LLM (LangGraph + OpenRouter/OpenAI) ---
+langgraph>=0.2.50
+langchain-core>=0.3.15
+langchain-openai>=0.2.5
+openai>=1.50.0
+
+# --- 2. Темпоральный GraphRAG и Гибридный поиск (Vectors + BM25) ---
+networkx>=3.3
+faiss-cpu>=1.8.0
+rank-bm25>=0.2.2
+numpy>=1.26.0
+
+# --- 3. Продакшн API, валидация и конфиги (FastAPI + Pydantic) ---
+fastapi>=0.115.0
+uvicorn[standard]>=0.32.0
+pydantic>=2.9.0
+pydantic-settings>=2.6.0
+python-dotenv>=1.0.1
+httpx>=0.27.2
+
+# --- 4. Мониторинг, трейсинг и тестирование (Плюсы из вакансии) ---
+langfuse>=2.50.0
+pytest>=8.3.0
+pytest-asyncio>=0.24.0
