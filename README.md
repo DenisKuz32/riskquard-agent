@@ -52,26 +52,32 @@ Fine-Tuning & RL: Unsloth, TRL (GRPOTrainer), PEFT (LoRA / QLoRA), vLLM
 Production & MLOps: FastAPI, Uvicorn (ASGI), Docker, Langfuse (Observability & Tracing)
 
 ### ⚡ Быстрый старт
-1. Локальный запуск
-python3 -m venv .venv
-source .venv/bin/activate
+1. Локальный запуск 
+
+python3 -m venv .venv 
+
+source .venv/bin/activate 
+
 pip install -r requirements.txt
 
-# Создайте .env файл с ключом:
-# OPENROUTER_API_KEY=sk-or-v1-...
-# OPENROUTER_MODEL=anthropic/claude-3.5-haiku
+Создайте .env файл с ключом:
+
+OPENROUTER_API_KEY=sk-or-v1-...
+
+OPENROUTER_MODEL=
 
 # Запуск тестовых сценариев (Temporal RAG + Indirect Injection):
 python3 test_run.py
 
 # Запуск FastAPI сервера:
 uvicorn src.api.main:app --reload
+
 Swagger UI доступен по адресу: http://127.0.0.1:8000/docs
 
 ### 2. Запуск в Docker
 docker compose up --build
 ### 📂 Структура проекта (Clean Architecture)
-Plaintext
+```Plaintext
 riskguard-agent/
 ├── src/
 │   ├── domain/           # Сущности Pydantic (models.py) и абстракции (interfaces.py)
@@ -83,3 +89,4 @@ riskguard-agent/
 ├── Dockerfile
 ├── docker-compose.yml
 └── test_run.py
+```
